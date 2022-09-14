@@ -1,7 +1,7 @@
 //  Time Complexity  : O(N)
 //  Space Complexity : O(1)
 int Solution::isPalindrome(string A) {
-    //  Modify the same string into new valid string
+    //  Modify the same String into new valid string
     
     //  Update valid character's position in the string by making them contiguous
     //  ie : removing spaces, cases and all special characters
