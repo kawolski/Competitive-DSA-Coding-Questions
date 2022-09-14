@@ -1,3 +1,5 @@
+//  Time Complexity  : O(2^N)
+//  Space Complexity : O(2^N)
 //  Function to check if the string is palindrome : 2 Pointer Approach
 bool isPalindrome(string str){
     int low = 0;
