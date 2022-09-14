@@ -45,7 +45,7 @@ int Solution::minCut(string A) {
                     mini = res[j-1];
             }
         }
-        //  Minimum partitions needed for substrings made from string(0,i-1) + 1
+        //  Minimum partitions needed for substrings made from String(0,i-1) + 1
         res[i] = mini+1;
     }
     
