@@ -8,15 +8,18 @@ int Solution::minCut(string A) {
     int n = A.size();
     vector<vector<bool>> isPalin(n,vector<bool>(n,false));
     
-    //  Make palindrome dp array
+    //  Make isPalindrome dp array
     for(int g=0;g<n;g++){
         for(int i=0;i<n-g;i++){
             int j = i+g;
+            //  If gap is 0  ;  ie : i == j
             if(g == 0)
                 isPalin[i][j] = true;
+            //  If gap == 1 just check both characters
             else if(g == 1){
                 isPalin[i][j] = (A[i] == A[j]);
             }
+            //  Else if edge charactars are same and the center substring is palindrome then whole string is palindrome
             else{
                 if(A[i] == A[j] && isPalin[i+1][j-1] == true)
                     isPalin[i][j] = true;
@@ -42,6 +45,7 @@ int Solution::minCut(string A) {
                     mini = res[j-1];
             }
         }
+        //  Minimum partitions needed for substrings made from string(0,i-1) + 1
         res[i] = mini+1;
     }
     
