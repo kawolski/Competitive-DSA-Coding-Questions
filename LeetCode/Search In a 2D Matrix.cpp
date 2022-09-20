@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 //      Time Complexity  : O(Log(N))
 //      Space Complexity : O(1)
 class Solution {
