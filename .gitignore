@@ -1,2 +1,3 @@
 # Ignore all the compiled files
 *.exe
+*.bat
