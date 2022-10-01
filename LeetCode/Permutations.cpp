@@ -22,7 +22,7 @@ public:
             
         };
         
-        //  Function call with index 0
+        //  Function call with index = 0
         perm(0);
         
         return ans;
