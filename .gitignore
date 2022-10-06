@@ -1,3 +1,4 @@
 # Ignore all the compiled files
 *.exe
 *.bat
+*.ps1
