@@ -1,5 +1,6 @@
-//      Time Complexity  : O()
-//      Space Complexity : O()
+//      Time Complexity  : O(N)
+//      Space Complexity : O(N)
+//      where   N = length of number
 class Solution {
 public:
     //  Function to square and add all digits of the given number
