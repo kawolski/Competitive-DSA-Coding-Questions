@@ -1,4 +1,3 @@
-/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -9,7 +8,7 @@
  * };
  */
 //      Time Complexity  : O(N)
-//      Space Complexity : O(1)
+//      Space Complexity : O(N)
 class Solution {
 public:
     //  Function to Reverse Linklist
