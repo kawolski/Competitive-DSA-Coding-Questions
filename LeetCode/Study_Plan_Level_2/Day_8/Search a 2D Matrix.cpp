@@ -1,5 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
 //      Time Complexity  : O(Log(N))
 //      Space Complexity : O(1)
 class Solution {
@@ -11,8 +9,6 @@ public:
         function<int(int)> get_nth_element = [&](int num)->int{
             return (*(matrix[num/c].begin()+num%c));
         };
-        //  Assume element not present
-        bool ans = false;
         //  Binary Search Compute
         int low = 0;
         int high = r*c-1;
@@ -25,11 +21,10 @@ public:
             else if(element > target)
                 high = mid - 1;
             else{
-                ans = true;
-                break;
+                return true;
             }
         }
-        //  Return ans
-        return ans;
+        //  Element Not Found
+        return false;
     }
 };
