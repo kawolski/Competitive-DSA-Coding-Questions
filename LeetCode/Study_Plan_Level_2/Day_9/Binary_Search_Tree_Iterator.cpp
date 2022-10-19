@@ -11,40 +11,34 @@
  */
 class BSTIterator {
 private:        //  Encapsulation
-    int index;
-    vector<int> iot;
+    stack<TreeNode*> st;
     //  In Order Traversal
     void iot_traversal(TreeNode* root){
-        //  Base Case
-        if(root == nullptr) return;
-        //  Left
-        iot_traversal(root->left);
-        //  Node
-        iot.push_back(root->val);
-        //  Right
-        iot_traversal(root->right);
+        for(;root != nullptr;st.push(root),root=root->left);
     }
 public:         //  Abstraction
     BSTIterator(TreeNode* root) {
         //  Empty the IOT
-        iot.clear();
+        while(!st.empty())
+            st.pop();
         //  Create In-Order Traversal
         iot_traversal(root);
-        //  Set current Index
-        index = -1;
     }
     
     //      Time Complexity : O(1)
     int next() {
-        if(hasNext())
-            return iot[++index];
-        else
-            return -1;
+        //  Get & Pop the next element
+        TreeNode* next = st.top();
+        st.pop();
+        //  Continue & Save next traversal elements
+        iot_traversal(next->right);
+        //  Return required value
+        return next->val;
     }
     
     //      Time Complexity : O(1)
     bool hasNext() {
-        return (index+1) < iot.size();
+        return !st.empty();
     }
 };
 
