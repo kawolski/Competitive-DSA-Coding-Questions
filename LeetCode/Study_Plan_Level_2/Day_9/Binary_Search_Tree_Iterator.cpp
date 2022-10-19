@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+//      Space Complexity : O(log N)
 class BSTIterator {
 private:        //  Encapsulation
     stack<TreeNode*> st;
